@@ -1,16 +1,3 @@
-let screenW = window.innerWidth; 
-let screenH = window.innerHeight;
-
-if (screenH > screenW) {
-  $('.memory-card').css('width', '200px');
-  $('.memory-card').css('height', '200px');
-  $('.header').css('font-size', '30px');
-  $('button').css('font-size', '40px');  
-  $('span').css('font-size', '35px');  
-  $('a').css('font-size', '35px');  
-  $('.btn').css('font-size', '30px');    
-}
-
 const cards = document.querySelectorAll('.memory-card');
 
 let hasFlippedCard = false;
@@ -20,7 +7,6 @@ let countMatch = 0;
 let countAll = 0;
 let countSec = 0;
 let countMin = 0;
-//let start, stop, stopper;
 let interval;
 
 function flipCard() {
@@ -33,8 +19,7 @@ function flipCard() {
     hasFlippedCard = true;
     firstCard = this;
 
-    if (firstCard && countAll === 0) {
-      //start = Date.now();
+    if (firstCard && countAll === 0) {      
       interval = setInterval(Stopper, 1000);   
     }        
     return;
@@ -67,19 +52,11 @@ function checkForMatch() {
 
   $('.header').text('Eltelt idő: '+countMin+':'+countSec+' | Próbálkozások: '+ countAll+' | Talált párok: '+countMatch);
 
-  if (countMatch === 12) {
-    //stop = Date.now();    
-    //stopper = stop - start;    
-     
-    $('.header').css('color', 'blue');
-    // $('.header').css('font-weight', 'bold');    
+  if (countMatch === 12) {     
+    $('.header').css('color', 'blue');    
     $('.header').text('Ügyes vagy! Eltelt idő: '+countMin+':'+countSec+' | Próbálkozások: '+ countAll+' | Talált párok: '+countMatch);    
-    lockBoard = true;
-    // alert("ÜGYES VAGY!\n" + countAll + " próbálkozásból és \n"+ 
-    // Math.floor(stopper/60000) +" perc "+ Math.floor((stopper/1000)%60) +
-    // " másodperc alatt \nmegtaláltad az összes párt.");       
-    clearInterval(interval);
-    //reStart();    
+    lockBoard = true;   
+    clearInterval(interval);     
   }  
 }
 
