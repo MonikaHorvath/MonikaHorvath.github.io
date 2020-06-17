@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="memória játék, hüllők, madarak és fiókák, erdei állatok, mancs nyomok, kétéltűek, MME, animal memory game, " />
+  <meta name="description" content="Szabadidős, természetismereti memória játék nem csak gyerekeknek." />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v5.13.0/css/pro.min.css">
+  <link rel="stylesheet" href="test-style.css">
+  <title>Hüllők</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark" style="background: green;">
+    <a class="navbar-brand" style="color: yellow;" href="#">Memória Játék</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index2.html"><i class="fas fa-rabbit"></i> Erdei állatok</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mancsok2.html"><i class="fas fa-paw"></i> Mancs nyomok</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="madarfiokak.html"><i class="fas fa-dove"></i> Madárfiókák</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="hullok.html"><i class="fas fa-snake"></i> Hüllők<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="keteltuek.html"><i class="fas fa-frog"></i> Kétéltűek</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- <div class="nav">
+    <nav>
+      <span>Memória Játék</span>
+      <a href="index.html">Erdei állatok</a>
+      <a href="mancsok.html">Mancs nyomok</a>
+      <a class="active" href="hullok.html">Hüllők</a>
+    </nav>
+  </div> -->
+  <div class="btn">Találd meg az azonos állatfotókat! <button id="btnNewGame">Új játék</button></div>
+  <div class="header">Eltelt idő: 0:0 | Próbálkozások: 0 | Talált párok: 0</div>
+  <div class="container">
+    <section class="memory-game">
+
+      <div class="memory-card" data-framework="alpesi_gote">
+        <img class="front-face" src="img/43_zold_gyik.jpg" alt="alpesi gőte" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+      <div class="memory-card" data-framework="alpesi_gote">
+        <img class="front-face" src="img/43_zold_gyik.jpg" alt="alpesi gőte" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+
+      <div class="memory-card" data-framework="kis_tavibeka">
+        <img class="front-face" src="img/44_mocsari_teknos.jpg" alt="kis tavibéka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+      <div class="memory-card" data-framework="kis_tavibeka">
+        <img class="front-face" src="img/44_mocsari_teknos.jpg" alt="kis tavibéka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+
+      <div class="memory-card" data-framework="barna_asobeka">
+        <img class="front-face" src="img/45_rakosi_vipera.jpg" alt="barna ásóbéka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+      <div class="memory-card" data-framework="barna_asobeka">
+        <img class="front-face" src="img/45_rakosi_vipera.jpg" alt="barna ásóbéka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+
+      <div class="memory-card" data-framework="barna_varangy">
+        <img class="front-face" src="img/46_keresztes_vipera.jpg" alt="barna varangy" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+      <div class="memory-card" data-framework="barna_varangy">
+        <img class="front-face" src="img/46_keresztes_vipera.jpg" alt="barna varangy" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+
+      <div class="memory-card" data-framework="dunai_tarajosgote">
+        <img class="front-face" src="img/47_rezsiklo.jpg" alt="dunai tarajosgőte" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+      <div class="memory-card" data-framework="dunai_tarajosgote">
+        <img class="front-face" src="img/47_rezsiklo.jpg" alt="dunai tarajosgőte" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+
+      <div class="memory-card" data-framework="erdei_beka">
+        <img class="front-face" src="img/48_vizisiklo.jpg" alt="erdei béka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+      <div class="memory-card" data-framework="erdei_beka">
+        <img class="front-face" src="img/48_vizisiklo.jpg" alt="erdei béka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+
+      <div class="memory-card" data-framework="kecskebeka">
+        <img class="front-face" src="img/49_erdei_siklo.jpg" alt="kecskebéka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+      <div class="memory-card" data-framework="kecskebeka">
+        <img class="front-face" src="img/49_erdei_siklo.jpg" alt="kecskebéka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+
+      <div class="memory-card" data-framework="mocsari_beka">
+        <img class="front-face" src="img/50_kaszpi_haragossiklo.jpg" alt="mocsári béka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+      <div class="memory-card" data-framework="mocsari_beka">
+        <img class="front-face" src="img/50_kaszpi_haragossiklo.jpg" alt="mocsári béka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+
+      <div class="memory-card" data-framework="pettyes_gote">
+        <img class="front-face" src="img/51_kozonseges_labatlangyik.jpg" alt="pettyes gőte" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+      <div class="memory-card" data-framework="pettyes_gote">
+        <img class="front-face" src="img/51_kozonseges_labatlangyik.jpg" alt="pettyes gőte" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+
+      <div class="memory-card" data-framework="sargahasu_unka">
+        <img class="front-face" src="img/52_pannongyik.jpg" alt="sárgahasú unka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+      <div class="memory-card" data-framework="sargahasu_unka">
+        <img class="front-face" src="img/52_pannongyik.jpg" alt="sárgahasú unka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+
+      <div class="memory-card" data-framework="zold_levelibeka">
+        <img class="front-face" src="img/53_fali_gyik.jpg" alt="zöld levelibéka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+      <div class="memory-card" data-framework="zold_levelibeka">
+        <img class="front-face" src="img/53_fali_gyik.jpg" alt="zöld levelibéka" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+
+      <div class="memory-card" data-framework="zold_varangy">
+        <img class="front-face" src="img/54_furge_gyik.jpg" alt="zöld varangy" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+      <div class="memory-card" data-framework="zold_varangy">
+        <img class="front-face" src="img/54_furge_gyik.jpg" alt="zölgy varangy" />
+        <img class="back-face" src="img/mme-logo-5.jpg" alt="MME logo" />
+      </div>
+    </section>
+  </div>
+  <footer>
+    <div class="footer">A játék elkészítéséhez a Magyar Madártani és Természetvédelmi Egyesület engedélyezte a képek
+      <br>és a logó felhasználását. További információ <a id="mme-link" href="http://www.mme.hu/keteltuek-es-hullok"
+          target="blank">Magyarország hüllői</a>ről az MME Tudástárban.</div>
+  </footer>  
+  <div class="fb-button">
+    <div class="fb-like" data-href="http://mhorvath.nhely.hu/memorygame/hullok.html" data-width="300"
+      data-layout="button_count" data-action="like" data-size="small" data-share="true"></div>
+  </div>
+  <br>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+  <script src="mg-scripts.js"></script>
+  <script src="/keyblock.js"></script>
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/hu_HU/sdk.js#xfbml=1&version=v7.0&appId=372044612936109&autoLogAppEvents=1"></script>
+</body>
+
+</html>
